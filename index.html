@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+		<script src="js/three.js"></script>
+		<script>
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    document.body.appendChild( renderer.domElement );
+    var geometry = new THREE.CircleGeometry( 1, 82 );
+    var cubeGeometry = new THREE.BoxGeometry( 1, 1, 1 );
+
+    var material = new THREE.MeshBasicMaterial( { color: 0xff2ff4 } );
+    var cubeMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+    var circle = new THREE.Mesh( geometry, material );
+    var cube = new THREE.Mesh( cubeGeometry, cubeMaterial );
+    var light = new THREE.AmbientLight( 0xff2ff4, 1 ); // soft white light
+    scene.add( circle );
+    scene.add( cube );
+    scene.add( light );
+    camera.position.z = 5;
+
+    function render() {
+  	requestAnimationFrame( render );
+    circle.rotation.x += 0.04;
+    circle.rotation.y += 0.04;
+  	renderer.render( scene, camera );
+    }
+    render();
+		</script>
+	</body>
+</html>
