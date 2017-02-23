@@ -25,7 +25,7 @@
 			renderer = new THREE.WebGLRenderer({antialias: true});
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			myCanvas.appendChild( renderer.domElement );
-			renderer.setClearColor(0x000000);
+			renderer.setClearColor(0x191919);
 			renderer.setPixelRatio(window.devicePixelRatio);
 
 			// Scene
@@ -33,7 +33,6 @@
 
 			// Camera
 			camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 1000 );
-			camera.position.z = 6;
 
 			// Lights
 			var light = new THREE.AmbientLight(0xffffff, 0.5);
@@ -42,22 +41,33 @@
 			var light2 = new THREE.PointLight(0xffffff, 0.5);
 			scene.add(light2);
 
-			// Cube
-			var geometry = new THREE.SphereGeometry( 50 );
+			// Geometry
+			var sphere = new THREE.SphereGeometry( 80, 15, 15 );
+			var torusKnotGeometry = new THREE.TorusKnotGeometry( 80, 20, 100, 60 );
+
+			// Material
 			var material = new THREE.MeshLambertMaterial({
-				color: 0xffffff,
-				wireframe: true
+				color: 0xDEDEDE,
+				wireframe: true,
+				transparent: true,
+				opacity: 0.5
 			});
 
-			var cube = new THREE.Mesh( geometry, material );
-			cube.position.z = -500;
-			scene.add( cube );
+			// Creating and adding shapes
+			var torusKnot = new THREE.Mesh( torusKnotGeometry, material );
+			var sphere = new THREE.Mesh( sphere, material );
+			torusKnot.position.z = -500;
+			sphere.position.z = -500;
+			// scene.add( torusKnot );
+			scene.add( sphere );
 
 
 			function render() {
 				requestAnimationFrame( render );
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
+				torusKnot.rotation.x += 0.007;
+				torusKnot.rotation.y += 0.01;
+				sphere.rotation.x += 0.007;
+				sphere.rotation.y += 0.01;
 				renderer.render( scene, camera );
 			}
 			render();
