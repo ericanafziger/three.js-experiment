@@ -1,4 +1,11 @@
-/*#canvas {
-  height: 200vh;
-  background: red;
-}*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+#three-canvas {
+  margin: 0 auto;
+}

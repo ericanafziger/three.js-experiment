@@ -1,7 +1,15 @@
 var renderer,
     scene,
     camera,
-    myCanvas = document.getElementById('canvas');
+    width,
+    height,
+    myCanvas = document.getElementById('three-canvas');
+
+
+window.onresize = function(event) {
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 1000 ); 
+}
 
 // Renderer
 renderer = new THREE.WebGLRenderer({antialias: true});
