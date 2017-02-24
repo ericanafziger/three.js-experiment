@@ -13,12 +13,15 @@ body {
 canvas {
   display: block; }
 
+#three-canvas {
+  position: absolute; }
+
 .hero {
   position: relative;
   background: #191919;
   height: 100vh;
   width: 100vw; }
-  .hero-text {
+  .hero-body {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -26,12 +29,18 @@ canvas {
     color: #DEDEDE;
     font-size: 2rem; }
   .hero-btn {
-    position: absolute;
-    top: 0;
+    position: relative;
     padding: 15px 40px;
-    top: 60%;
+    top: 50px;
     left: 50%;
     transform: translate(-50%, 0); }
+
+.btn {
+  background: #DEDEDE;
+  font-size: 1rem;
+  color: black;
+  font-weight: 500;
+  border: 1px solid #DEDEDE; }
 
 .btn-ghost {
   background: none;
