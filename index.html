@@ -4,21 +4,34 @@
 		<meta charset=utf-8>
 		<title>My first three.js app</title>
 		<link rel="stylesheet" href="css/styles.css">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="js/scripts.js"></script>
+
+		</script>
 	</head>
 	<body>
 		<div class="hero">
 			<!--Rendering THREE.js canvas-->
-			<div id="three-canvas"></div>
+			<div class="three-canvas"></div>
 			<div class="hero-body">
 				<h1 class="underline">Erica Nafziger</h1>
 				<p class="center-text">Front-End Developer</p>
-				<button class="hero-btn btn-ghost">Resume</button>
+				<button class="hero-btn btn-ghost animate-in">Resumé</button>
+			</div>
+		</div>
+		<div class="section">
+			<div class="section-body center-element">
+				<h1 class="section__body-callout">Hello.</h1>
+				<div class="row">
+					<p class="col-6 animate-left">I’m a front-end developer and designer for the web. I like using my brain on a daily basis. The more challenging a project is the more I will push myself. I want to make sites that are functional, beautiful, and have a purpose. I went to school for digital media before falling in love with coding and the web. I went to Epicodus in Portland, OR to learn the fundaments of coding and </p>
+					<p class="col-6 animate-right">designing for the web. I have experience working in HTML, CSS - I’ll especially love it if I get to use Sass - jQuery, JavaScript, AngularJS, Ember, and a smattering of CSS frameworks. Wireframing and conceptualizing is my jam. If you need a designer to take your site from bland to shazam, I’m your gal. If you’ve read this far, scoll down to drop me a message.</p>
+				</div>
 			</div>
 		</div>
 
 
 
 		<script src="js/three.js"></script>
-		<script src="js/scripts.js"></script>
+		<script src="js/myTHREE.js"></script>
 	</body>
 </html>

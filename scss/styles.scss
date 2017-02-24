@@ -43,6 +43,22 @@ canvas {
     transform: translate(-50%, 0);
   }
 }
+
+.section {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: $black;
+  &-body {
+    width: 50%; //controlls width of section body content
+  }
+  &__body-callout {
+    color: $white;
+    font-size: 3rem;
+    margin-left: 20px;
+  }
+}
+
 .btn {
   background: $white;
   font-size: 1rem;
@@ -53,18 +69,25 @@ canvas {
 .btn-ghost {
   background: none;
   border: 2px solid $white;
-  color: white;
+  color: $white;
   font-size: 1rem;
   transition: all ease-in-out 100ms;
-  &:hover {
+  &:hover, &:focus, &:active {
     cursor: pointer;
     background: $white;
     color: $black;
     font-weight: 500;
+    outline: none;
   }
 }
 .center-text {
   text-align: center;
+}
+.center-element {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 h1.underline {
   border-bottom: 1px solid $white;
@@ -97,4 +120,26 @@ h6.underline {
 }
 p {
   font-size: 1rem;
+  color: $white;
+  line-height: 1.2rem;
+}
+.row {
+  width: 100%;
+  display: flex;
+}
+.col-6 {
+  width: 50%;
+  padding: 20px;
+  padding-top: 5px;
+}
+.animate-in {
+  opacity: 0;
+}
+.animate-left {
+  margin-left: -50px;
+  opacity: 0;
+}
+.animate-right {
+  margin-right: -50px;
+  opacity: 0;
 }

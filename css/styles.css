@@ -35,6 +35,18 @@ canvas {
     left: 50%;
     transform: translate(-50%, 0); }
 
+.section {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: #191919; }
+  .section-body {
+    width: 50%; }
+  .section__body-callout {
+    color: #DEDEDE;
+    font-size: 3rem;
+    margin-left: 20px; }
+
 .btn {
   background: #DEDEDE;
   font-size: 1rem;
@@ -45,17 +57,24 @@ canvas {
 .btn-ghost {
   background: none;
   border: 2px solid #DEDEDE;
-  color: white;
+  color: #DEDEDE;
   font-size: 1rem;
   transition: all ease-in-out 100ms; }
-  .btn-ghost:hover {
+  .btn-ghost:hover, .btn-ghost:focus, .btn-ghost:active {
     cursor: pointer;
     background: #DEDEDE;
     color: #191919;
-    font-weight: 500; }
+    font-weight: 500;
+    outline: none; }
 
 .center-text {
   text-align: center; }
+
+.center-element {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
 
 h1.underline {
   border-bottom: 1px solid #DEDEDE;
@@ -87,6 +106,28 @@ h6.underline {
   line-height: 3rem; }
 
 p {
-  font-size: 1rem; }
+  font-size: 1rem;
+  color: #DEDEDE;
+  line-height: 1.2rem; }
+
+.row {
+  width: 100%;
+  display: flex; }
+
+.col-6 {
+  width: 50%;
+  padding: 20px;
+  padding-top: 5px; }
+
+.animate-in {
+  opacity: 0; }
+
+.animate-left {
+  margin-left: -50px;
+  opacity: 0; }
+
+.animate-right {
+  margin-right: -50px;
+  opacity: 0; }
 
 /*# sourceMappingURL=styles.css.map */
