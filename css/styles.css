@@ -59,12 +59,14 @@ canvas {
   border: 2px solid #DEDEDE;
   color: #DEDEDE;
   font-size: 1rem;
-  transition: all ease-in-out 100ms; }
-  .btn-ghost:hover, .btn-ghost:focus, .btn-ghost:active {
+  transition: all ease-in-out 100ms;
+  font-weight: 500; }
+  .btn-ghost:hover {
     cursor: pointer;
     background: #DEDEDE;
     color: #191919;
-    font-weight: 500;
+    outline: none; }
+  .btn-ghost:focus, .btn-ghost:active {
     outline: none; }
 
 .center-text {
